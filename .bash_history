@@ -1,4 +1,0 @@
-cd ~
-ls
-fish
-exit
