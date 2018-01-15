@@ -2,6 +2,7 @@ FROM centos:latest
 MAINTAINER Dushyant Khosla <dushyant.khosla@yahoo.com
 
 COPY environment.yml environment.yml
+COPY start.sh /etc/profile.d/
 
 # Install Dependencies
 # —————————————————————————————————————————————
@@ -20,6 +21,7 @@ RUN wget --quiet https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86
 	&& rm miniconda.sh
 
 ENV PATH="/miniconda/bin:${PATH}"
+RUN conda config --add channels conda-forge 
 RUN conda env create -f environment.yml --quiet
 
 # Install latest version of Git
@@ -72,15 +74,9 @@ RUN yum -y autoremove \
 	&& yum clean all \
 	&& rm -rf /var/cache/yum
 
-# Activate the Environment
-# —————————————————————————————————————————————
-ENV PATH="/miniconda/envs/pmi-ds-env/bin/:${PATH}"
-
 # Start Here
 # —————————————————————————————————————————————
 WORKDIR /home/
-RUN git clone https://github.com/dushyantkhosla/ds-template-01.git
-WORKDIR /home/ds-template-01
 
 EXPOSE 8080
-CMD /usr/bin/fish
+CMD /usr/bin/bash

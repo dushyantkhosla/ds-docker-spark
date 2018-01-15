@@ -1,5 +1,6 @@
-name: pmi-ds-env
+name: ds-env
 channels:
+- conda-forge
 - defaults
 dependencies:
 - backports=1.0=py27_0
@@ -93,5 +94,5 @@ dependencies:
   - jupyter-console==5.2.0
   - jupyter-core==4.3.0
   - prompt-toolkit==1.0.15
-prefix: /Users/dkhosla/miniconda2/envs/pmi-ds-env
+prefix: /Users/dkhosla/miniconda2/envs/ds-env
 
