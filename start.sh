@@ -4,9 +4,6 @@ source activate ds-env
 # Print information
 echo ""
 echo ""
-echo "-----------------------------------------------------------------"
-echo ""
-echo ""
 
 echo "To get Fish and OMF, run ..."
 echo "-----------------------------------------------------------------"
@@ -21,11 +18,8 @@ echo "git clone https://github.com/dushyantkhosla/ds-template-01.git"
 echo ""
 echo "To start a Jupyter notebook server with Spark Context, run ..."
 echo "-----------------------------------------------------------------"
-echo “pyspark”
+echo "pyspark"
 
 
-echo ""
-echo ""
-echo "-----------------------------------------------------------------"
 echo ""
 echo ""
