@@ -20,6 +20,12 @@ echo "To start a Jupyter notebook server with Spark Context, run ..."
 echo "-----------------------------------------------------------------"
 echo "pyspark"
 
+echo ""
+echo "Configure git. Run ..."
+echo "-----------------------------------------------------------------"
+echo "git config --global user.email 'you@example.com'"
+echo "git config --global user.name 'Your Name'"
+
 
 echo ""
 echo ""
