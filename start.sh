@@ -1,6 +1,10 @@
 # Activate the Conda environment
 source activate ds-env
 
+# Configure Git
+git config --global user.email $GIT_USER_NAME
+git config --global user.name $GIT_USER_MAIL
+
 # Print information
 echo ""
 echo ""
@@ -21,11 +25,11 @@ echo "-----------------------------------------------------------------"
 echo "pyspark"
 
 echo ""
-echo "Configure git. Run ..."
+echo "If you didn't configure git during 'docker run', run ..."
 echo "-----------------------------------------------------------------"
 echo "git config --global user.email 'you@example.com'"
 echo "git config --global user.name 'Your Name'"
-
+echo "git config --list"
 
 echo ""
 echo ""
