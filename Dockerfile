@@ -43,7 +43,7 @@ RUN yum -y install bzip2 \
 	&& conda clean -i -l -t -y \
 	&& rm miniconda.sh \
 && yum install -y java-1.8.0-openjdk.x86_64 --quiet \
-	&& wget http://apache.redkiwi.nl/spark/spark-2.2.1/spark-2.2.1-bin-hadoop2.7.tgz \
+	&& wget http://dlcdn.apache.org/spark/spark-2.2.1/spark-2.2.1-bin-hadoop2.7.tgz \
 	&& tar xvf spark-2.2.1-bin-hadoop2.7.tgz \
 	&& mv spark-2.2.1-bin-hadoop2.7 /root/apache-spark \
 	&& rm spark-2.2.1-bin-hadoop2.7.tgz \
