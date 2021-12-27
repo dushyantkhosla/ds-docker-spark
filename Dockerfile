@@ -39,7 +39,9 @@ RUN yum -y install bzip2 \
 && wget --quiet https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh \
 	&& bash miniconda.sh  -b -p /miniconda \
 	&& conda config --append channels conda-forge \
-	&& conda env create -f environment.yml \
+	&& conda create -y -n env_pyspark python=3 \
+        && conda activate env_pyspark \
+        && conda install -y -c conda-forge pandas==1.1.1 pyarrow==1.0.1 jupyterlab scikit-learn seaborn sidetable pyspark \
 	&& conda clean -i -l -t -y \
 	&& rm miniconda.sh \
 && yum install -y java-1.8.0-openjdk.x86_64 --quiet \
